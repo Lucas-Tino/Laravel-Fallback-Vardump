@@ -1,0 +1,1 @@
+<img src="{{ asset('storage/logoetec.png') }}" height="60" width="170" alt="...">
