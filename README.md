@@ -1,66 +1,23 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<b><h1>Projeto Laravel - Rota fallback e formulário com vardump</h1></b>
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+<b><h2>Criando a rota fallback</h2></b>
+- No arquivo web.php, inserir o seguinte código para ter uma rota fallback, que faz com que o conteúdo dentro da função apareça na página para qualquer rota/url inexistente no site:  
+<img width="1650" height="566" alt="image" src="https://github.com/user-attachments/assets/f9741eb2-6e5c-41a4-9f96-a869c1305981" />
 
-## About Laravel
+<b><h2>Configurando o vardump</h2></b>
+- Inserir o seguinte código no arquivo ContatoController.php:
+<img width="1133" height="496" alt="image" src="https://github.com/user-attachments/assets/45874e5e-e9c9-4697-b2e3-fca8e7159471" />
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+- No arquivo contatdo.blade.php, criar um formulário, certificando-se que todos os campos tenham propriedades "name" distintas e a tag form tenha a propriedade action como "{{ route('site.contato') }}" e o method como "get":  
+<img width="1026" height="629" alt="image" src="https://github.com/user-attachments/assets/b483f9d1-2f3a-4a40-b05f-a3aa1060fb8b" /><br>
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+<b><h2>Demonstração do fallback e vardump</h2></b>
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- Abrindo uma rota inexistente:
+<img width="1920" height="941" alt="image" src="https://github.com/user-attachments/assets/555a8614-cfca-425c-aaa7-adc655c17b2c" />
 
-## Learning Laravel
+- Preenchendo formulário:  
+<img width="1894" height="2035" alt="image" src="https://github.com/user-attachments/assets/80d4c8ef-fc8a-47e4-9f0d-376e0cb2d71a" /><br>
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+- Página após o envio:
+<img width="1894" height="893" alt="image" src="https://github.com/user-attachments/assets/7644b573-31f0-4e2a-a990-c861fd893147" />
